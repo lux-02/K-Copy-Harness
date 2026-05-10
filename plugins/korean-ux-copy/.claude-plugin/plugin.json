@@ -1,6 +1,6 @@
 {
   "name": "korean-ux-copy",
-  "description": "Audit and improve user-facing Korean UX copy in codebases with optional Kanana-assisted rewrite candidates.",
+  "description": "Audit and improve user-facing Korean UX copy in codebases with conversion-safe rewrites, optional Kanana assistance, and LLM fallback.",
   "version": "0.1.0",
   "author": {
     "name": "lux-02"

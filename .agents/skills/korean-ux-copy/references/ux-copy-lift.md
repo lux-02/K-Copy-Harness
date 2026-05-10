@@ -1,8 +1,8 @@
 # UX Copy Lift
 
-Use this pass after Korean naturalness diagnosis and before Kanana rewriting. The goal is not prettier Korean. The goal is Korean product copy that fits the exact code surface where it appears.
+Use this pass after Korean naturalness diagnosis and before Benefit Hook Lift or Kanana rewriting. The goal is not prettier Korean. The goal is Korean product copy that fits the exact code surface where it appears.
 
-This is not a general UX writing checklist and not a marketing copy-editing sweep. Start from the component role, surrounding source, and current product behavior. Improve only what can be justified from the codebase.
+This is not a general UX writing checklist and not a marketing copy-editing sweep. Start from the component role, surrounding source, and current product behavior. Improve only what can be justified from the codebase. For conversion surfaces, run `benefit-hook-lift.md` after this pass to make the primary rewrite more benefit-led without broadening product claims.
 
 ## Surface Checks
 
@@ -50,11 +50,12 @@ Lift Reason: why the rewrite improves product usability
 
 ## Korean UX Defaults
 
-- Prefer calm directness over excitement.
+- Prefer calm directness over empty excitement. Conversion surfaces may be sharper and more benefit-led after the Benefit Hook Lift pass, but trust and recovery surfaces stay plain.
 - Prefer "화면에서 가능한 행동" over "제품이 대단한 이유".
 - Use "당신" sparingly; Korean product copy often sounds better without a second-person pronoun.
 - Use 해요체 only when the product voice is already casual. Do not mix 합니다체 and 해요체 in the same surface unless the project does.
 - Do not add "무료", "무제한", "보장", "연동", "자동", "실시간" unless the source code or nearby copy already supports it.
+- Do not flatten strong supported benefits just to sound neutral. If a surface is meant to sell or move the user forward, keep one concrete hook as long as it stays true.
 
 ## Lift Examples
 

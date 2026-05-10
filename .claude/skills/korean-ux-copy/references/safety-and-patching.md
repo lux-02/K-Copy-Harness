@@ -59,6 +59,9 @@ Apply only when:
 - no unsupported product claims were added,
 - no evidence cue, pricing claim, channel integration, or guarantee was invented,
 - UX Copy Lift did not broaden the user's possible action beyond current product behavior.
+- Benefit Hook Lift did not make the copy more clickable by adding unsupported proof, urgency, capacity, automation, integration, discount, guarantee, or support claims.
+- Runtime LLM fallback candidates passed the same claim-boundary review and are labeled `llm_fallback`.
+- `hooked_safe` rewrites produced by runtime LLM fallback are `review_recommended` by default; use `safe_auto` only for obvious deterministic copy-only fixes.
 
 Risk labels:
 
@@ -67,3 +70,11 @@ Risk labels:
 | `safe_auto` | small copy-only change, safe to apply when requested |
 | `review_recommended` | good suggestion, human should confirm |
 | `manual_only` | report only |
+
+Copy mode labels:
+
+| Label | Meaning |
+|---|---|
+| `hooked_safe` | benefit-led primary rewrite for conversion surfaces; still claim-safe |
+| `safe_plain` | clear, low-risk rewrite for trust, recovery, accessibility, or high-stakes surfaces |
+| `manual_only` | do not patch automatically |

@@ -11,13 +11,13 @@ const config = resolveKananaConfig();
 
 if (config.apiKey) {
   console.log(`Kanana 설정: 사용 가능 (${config.keySource})`);
-  console.log("고영향 한국어 문구는 Kanana 후보를 받은 뒤 agent safety gate로 다시 검증합니다.");
+  console.log("고영향 한국어 문구는 Kanana로 conversion-safe 후보를 받은 뒤 agent safety gate로 다시 검증합니다.");
   process.exit(0);
 }
 
 console.log("Kanana 설정: 없음");
-console.log("계속 deterministic 모드로 진단할 수 있습니다.");
-console.log("Hero, SEO, 가격표, FAQ처럼 문맥이 중요한 문구는 Kanana를 설정하면 더 자연스러운 한국어 후보를 받을 수 있습니다.");
+console.log("계속 deterministic + runtime LLM fallback 모드로 진단하고 rewrite를 제안할 수 있습니다.");
+console.log("Hero, SEO, 가격표, FAQ처럼 문맥이 중요한 문구는 Kanana를 설정하면 더 선택받기 쉬운 한국어 후보를 받을 수 있습니다.");
 
 if (!process.stdin.isTTY) {
   console.log("현재 shell에서는 대화형 설정을 시작할 수 없습니다.");

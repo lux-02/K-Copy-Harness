@@ -56,7 +56,7 @@ function escapeEnvValue(value) {
 }
 
 console.log("Kanana 설정을 시작합니다.");
-console.log("설정하면 Hero, SEO, 가격표, FAQ처럼 말투가 중요한 문구의 한국어 rewrite 후보를 더 자연스럽게 받을 수 있습니다.");
+console.log("설정하면 Hero, SEO, 가격표, FAQ처럼 말투가 중요한 문구의 conversion-safe rewrite 후보를 더 자연스럽게 받을 수 있습니다.");
 console.log("스킬은 Kanana 후보를 그대로 적용하지 않고 agent safety gate로 다시 검증합니다.");
 
 const apiKey = await askHidden("Kanana API key: ");

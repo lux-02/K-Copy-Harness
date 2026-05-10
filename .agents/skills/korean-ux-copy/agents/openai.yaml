@@ -1,4 +1,4 @@
 interface:
   display_name: "Korean UX Copy"
-  short_description: "Korean UX copy review, UX lift, and Kanana batch rewrite"
-  default_prompt: "Use $korean-ux-copy to audit Korean user-facing copy, identify UX copy gaps, and propose safe Kanana-assisted rewrites."
+  short_description: "Korean UX copy review, benefit hook lift, Kanana rewrite, and LLM fallback"
+  default_prompt: "Use $korean-ux-copy to audit Korean user-facing copy, identify UX copy gaps, and propose one conversion-safe rewrite by default; if Kanana is unavailable, use llm_fallback with the same claim gate."
