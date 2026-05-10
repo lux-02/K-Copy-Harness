@@ -6,8 +6,8 @@
     "name": "lux-02",
     "url": "https://github.com/lux-02"
   },
-  "homepage": "https://github.com/lux-02/K-Copy-Harness",
-  "repository": "https://github.com/lux-02/K-Copy-Harness",
+  "homepage": "https://github.com/lux-02/korean-ux-copy",
+  "repository": "https://github.com/lux-02/korean-ux-copy",
   "license": "MIT",
   "keywords": [
     "korean",
@@ -28,9 +28,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://github.com/lux-02/K-Copy-Harness",
-    "privacyPolicyURL": "https://github.com/lux-02/K-Copy-Harness#privacy-and-data",
-    "termsOfServiceURL": "https://github.com/lux-02/K-Copy-Harness#license",
+    "websiteURL": "https://github.com/lux-02/korean-ux-copy",
+    "privacyPolicyURL": "https://github.com/lux-02/korean-ux-copy#privacy-and-data",
+    "termsOfServiceURL": "https://github.com/lux-02/korean-ux-copy#license",
     "defaultPrompt": [
       "Audit this project's Korean UX copy. Do not edit files.",
       "Find AI-like Korean copy and show safe dry-run diffs.",

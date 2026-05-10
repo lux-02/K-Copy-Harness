@@ -20,7 +20,7 @@ vendor
 .env.*
 ```
 
-Allow `.env.korean-ux-copy.local` only for reading Korean UX Copy provider settings. Legacy `.env.k-copy-harness.local` may be read for backward compatibility. Never print either file's contents.
+Allow `.env.korean-ux-copy.local` only for reading Korean UX Copy provider settings. Never print this file's contents.
 
 ## User-Facing Targets
 

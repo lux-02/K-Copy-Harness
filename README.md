@@ -89,7 +89,7 @@ Hero, CTA, feature, pricing, SEO, FAQ처럼 전환을 만드는 표면은 `hooke
 Codex에서는 repo marketplace를 추가합니다.
 
 ```bash
-codex plugin marketplace add lux-02/K-Copy-Harness
+codex plugin marketplace add lux-02/korean-ux-copy
 ```
 
 현재 Codex CLI는 marketplace `add`, `upgrade`, `remove` 중심이라 Claude Code처럼 별도 `install`/`list` 명령까지 제공하지 않습니다. 위 명령으로 `korean-ux-copy-marketplace`가 등록되면 Codex의 plugin marketplace 경로에서 사용할 수 있습니다.
@@ -99,7 +99,7 @@ codex plugin marketplace add lux-02/K-Copy-Harness
 Claude Code에서는 marketplace를 추가한 뒤 플러그인을 설치합니다.
 
 ```bash
-claude plugin marketplace add lux-02/K-Copy-Harness --scope user
+claude plugin marketplace add lux-02/korean-ux-copy --scope user
 claude plugin install korean-ux-copy@korean-ux-copy-marketplace --scope user
 ```
 
@@ -124,8 +124,8 @@ Status: enabled
 Codex skill:
 
 ```bash
-git clone https://github.com/lux-02/K-Copy-Harness.git
-cd K-Copy-Harness
+git clone https://github.com/lux-02/korean-ux-copy.git
+cd korean-ux-copy
 mkdir -p ~/.agents/skills
 ln -sfn "$PWD/.agents/skills/korean-ux-copy" ~/.agents/skills/korean-ux-copy
 ```
@@ -133,8 +133,8 @@ ln -sfn "$PWD/.agents/skills/korean-ux-copy" ~/.agents/skills/korean-ux-copy
 Claude Code skill:
 
 ```bash
-git clone https://github.com/lux-02/K-Copy-Harness.git
-cd K-Copy-Harness
+git clone https://github.com/lux-02/korean-ux-copy.git
+cd korean-ux-copy
 mkdir -p ~/.claude/skills
 ln -sfn "$PWD/.claude/skills/korean-ux-copy" ~/.claude/skills/korean-ux-copy
 ```
@@ -145,14 +145,14 @@ Codex:
 
 ```bash
 mkdir -p .agents/skills
-cp -R /path/to/K-Copy-Harness/.agents/skills/korean-ux-copy .agents/skills/
+cp -R /path/to/korean-ux-copy/.agents/skills/korean-ux-copy .agents/skills/
 ```
 
 Claude Code:
 
 ```bash
 mkdir -p .claude/skills
-cp -R /path/to/K-Copy-Harness/.claude/skills/korean-ux-copy .claude/skills/
+cp -R /path/to/korean-ux-copy/.claude/skills/korean-ux-copy .claude/skills/
 ```
 
 ### 플러그인 패키지 로컬 테스트

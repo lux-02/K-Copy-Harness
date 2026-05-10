@@ -12,7 +12,6 @@ The scripts read provider settings in this order:
 2. `KANANA_API_KEY`
 3. `.env.korean-ux-copy.local` in the current project
 4. `~/.config/korean-ux-copy/secrets.env`
-5. legacy fallback: `K_COPY_HARNESS_KANANA_API_KEY`, `.env.k-copy-harness.local`, `~/.config/k-copy-harness/secrets.env`
 
 Do not read a project `.env` file by default.
 

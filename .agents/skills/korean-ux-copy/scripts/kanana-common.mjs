@@ -32,9 +32,7 @@ function parseEnvFile(filePath) {
 
 export function resolveKananaConfig({ cwd = process.cwd() } = {}) {
   const localConfig = parseEnvFile(path.join(cwd, ".env.korean-ux-copy.local"));
-  const legacyLocalConfig = parseEnvFile(path.join(cwd, ".env.k-copy-harness.local"));
   const globalConfig = parseEnvFile(path.join(os.homedir(), ".config", "korean-ux-copy", "secrets.env"));
-  const legacyGlobalConfig = parseEnvFile(path.join(os.homedir(), ".config", "k-copy-harness", "secrets.env"));
 
   const apiKey =
     process.env.KOREAN_UX_COPY_KANANA_API_KEY ||
@@ -43,12 +41,6 @@ export function resolveKananaConfig({ cwd = process.cwd() } = {}) {
     localConfig.KANANA_API_KEY ||
     globalConfig.KOREAN_UX_COPY_KANANA_API_KEY ||
     globalConfig.KANANA_API_KEY ||
-    process.env.K_COPY_HARNESS_KANANA_API_KEY ||
-    localConfig.K_COPY_HARNESS_KANANA_API_KEY ||
-    legacyLocalConfig.K_COPY_HARNESS_KANANA_API_KEY ||
-    legacyLocalConfig.KANANA_API_KEY ||
-    legacyGlobalConfig.K_COPY_HARNESS_KANANA_API_KEY ||
-    legacyGlobalConfig.KANANA_API_KEY ||
     "";
 
   const keySource = process.env.KOREAN_UX_COPY_KANANA_API_KEY
@@ -59,13 +51,7 @@ export function resolveKananaConfig({ cwd = process.cwd() } = {}) {
         ? ".env.korean-ux-copy.local"
         : globalConfig.KOREAN_UX_COPY_KANANA_API_KEY || globalConfig.KANANA_API_KEY
           ? "~/.config/korean-ux-copy/secrets.env"
-          : process.env.K_COPY_HARNESS_KANANA_API_KEY
-            ? "env:K_COPY_HARNESS_KANANA_API_KEY"
-            : legacyLocalConfig.K_COPY_HARNESS_KANANA_API_KEY || legacyLocalConfig.KANANA_API_KEY
-              ? ".env.k-copy-harness.local"
-              : legacyGlobalConfig.K_COPY_HARNESS_KANANA_API_KEY || legacyGlobalConfig.KANANA_API_KEY
-                ? "~/.config/k-copy-harness/secrets.env"
-                : "missing";
+          : "missing";
 
   return {
     apiKey,
@@ -74,15 +60,11 @@ export function resolveKananaConfig({ cwd = process.cwd() } = {}) {
       process.env.KANANA_BASE_URL ||
       localConfig.KANANA_BASE_URL ||
       globalConfig.KANANA_BASE_URL ||
-      legacyLocalConfig.KANANA_BASE_URL ||
-      legacyGlobalConfig.KANANA_BASE_URL ||
       DEFAULT_BASE_URL,
     model:
       process.env.KANANA_MODEL ||
       localConfig.KANANA_MODEL ||
       globalConfig.KANANA_MODEL ||
-      legacyLocalConfig.KANANA_MODEL ||
-      legacyGlobalConfig.KANANA_MODEL ||
       DEFAULT_MODEL,
   };
 }
