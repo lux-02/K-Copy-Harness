@@ -1,0 +1,17 @@
+{
+  "name": "korean-ux-copy",
+  "description": "Audit and improve user-facing Korean UX copy in codebases with optional Kanana-assisted rewrite candidates.",
+  "version": "0.1.0",
+  "author": {
+    "name": "lux-02"
+  },
+  "homepage": "https://github.com/lux-02/K-Copy-Harness",
+  "repository": "https://github.com/lux-02/K-Copy-Harness",
+  "license": "MIT",
+  "keywords": [
+    "korean",
+    "ux-copy",
+    "kanana",
+    "agent-skill"
+  ]
+}

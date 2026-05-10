@@ -97,6 +97,36 @@ mkdir -p .claude/skills
 cp -R /path/to/korean-ux-copy/.claude/skills/korean-ux-copy .claude/skills/
 ```
 
+### 플러그인 패키지로 테스트하기
+
+플러그인 배포 흐름을 확인하려면 저장소 루트의 `plugins/korean-ux-copy` 패키지를 사용하세요. 이 패키지는 Codex용 `.codex-plugin/plugin.json`과 Claude Code용 `.claude-plugin/plugin.json`을 함께 포함합니다.
+
+Codex repo marketplace:
+
+```bash
+codex plugin marketplace add .
+```
+
+Claude Code:
+
+```bash
+claude plugin validate .
+claude --plugin-dir ./plugins/korean-ux-copy
+```
+
+Claude marketplace 설치까지 확인할 때:
+
+```bash
+claude plugin marketplace add ./ --scope local
+claude plugin install korean-ux-copy@korean-ux-copy-marketplace --scope local
+```
+
+Claude Code에서 플러그인 이름을 명시해 실행할 때:
+
+```txt
+/korean-ux-copy:korean-ux-copy 이 프로젝트의 한국어 UX 카피를 진단해줘. 파일은 수정하지 마.
+```
+
 ## 실행
 
 대상 프로젝트를 연 뒤, 파일을 수정하지 않고 먼저 진단만 요청하는 흐름을 권장합니다.
@@ -185,9 +215,15 @@ Risk: review_recommended
 
 이 경우 스킬은 Kanana 후보를 적용하지 않고, 규칙 기반 수정안이나 보고 전용(report-only) 판단으로 되돌립니다.
 
+## Privacy and Data
+
+Korean UX Copy는 기본적으로 로컬 코드베이스를 읽어 사용자에게 보이는 한국어 문구를 진단합니다. Kanana를 설정하지 않으면 외부 provider 호출 없이 규칙 기반 진단으로 동작합니다.
+
+Kanana를 사용할 때도 전체 파일이나 비밀값을 보내지 않습니다. 스킬은 선택된 한국어 문구 조각과 역할 정보만 배치 요청으로 보내도록 설계되어 있으며, API 키는 저장소가 아니라 로컬 설정에만 저장합니다.
+
 ## 배포 대상
 
-이 저장소에서 공개 배포할 파일은 Codex Skill과 Claude Skill입니다.
+이 저장소에서 공개 배포할 파일은 Codex Skill, Claude Skill, 그리고 양쪽에서 테스트할 수 있는 플러그인 패키지입니다.
 
 ```txt
 .agents/skills/korean-ux-copy/
@@ -200,6 +236,17 @@ Risk: review_recommended
   SKILL.md
   references/
   scripts/
+
+plugins/korean-ux-copy/
+  .codex-plugin/plugin.json
+  .claude-plugin/plugin.json
+  skills/korean-ux-copy/
+  assets/
+  README.md
 ```
 
-루트의 `README.md`, `LICENSE`, `.gitignore`를 제외한 작업용 하네스 문서와 fixture 문서는 공개 배포 대상에서 제외합니다. 특히 `.claude` 내부에서는 `.claude/skills/korean-ux-copy/`만 공개합니다.
+루트의 `README.md`, `LICENSE`, `.gitignore`, `.agents/plugins/marketplace.json`, `.claude-plugin/marketplace.json`를 제외한 작업용 하네스 문서와 fixture 문서는 공개 배포 대상에서 제외합니다. 특히 `.claude` 내부에서는 `.claude/skills/korean-ux-copy/`만 공개합니다.
+
+## License
+
+MIT

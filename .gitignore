@@ -12,6 +12,9 @@
 !assets/case-studies/
 !assets/case-studies/**
 
+!.agents/plugins/
+!.agents/plugins/**
+
 !.agents/
 !.agents/skills/
 !.agents/skills/korean-ux-copy/
@@ -21,6 +24,17 @@
 !.claude/skills/
 !.claude/skills/korean-ux-copy/
 !.claude/skills/korean-ux-copy/**
+
+!.claude-plugin/
+!.claude-plugin/**
+
+!plugins/
+!plugins/korean-ux-copy/
+!plugins/korean-ux-copy/**
+!plugins/korean-ux-copy/.codex-plugin/
+!plugins/korean-ux-copy/.codex-plugin/**
+!plugins/korean-ux-copy/.claude-plugin/
+!plugins/korean-ux-copy/.claude-plugin/**
 
 **/.DS_Store
 **/.env

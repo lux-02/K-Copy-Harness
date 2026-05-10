@@ -1,0 +1,45 @@
+{
+  "name": "korean-ux-copy",
+  "version": "0.1.0",
+  "description": "Audit and improve user-facing Korean UX copy in codebases with optional Kanana-assisted rewrite candidates.",
+  "author": {
+    "name": "lux-02",
+    "url": "https://github.com/lux-02"
+  },
+  "homepage": "https://github.com/lux-02/K-Copy-Harness",
+  "repository": "https://github.com/lux-02/K-Copy-Harness",
+  "license": "MIT",
+  "keywords": [
+    "korean",
+    "ux-copy",
+    "kanana",
+    "codex",
+    "claude",
+    "agent-skill"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Korean UX Copy",
+    "shortDescription": "Find and improve awkward Korean UX copy.",
+    "longDescription": "Audit Korean user-facing copy in codebases, classify UI surfaces, suggest product-context rewrites, and optionally use Kanana as a Korean rewrite provider with agent-side safety gates.",
+    "developerName": "lux-02",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/lux-02/K-Copy-Harness",
+    "privacyPolicyURL": "https://github.com/lux-02/K-Copy-Harness#privacy-and-data",
+    "termsOfServiceURL": "https://github.com/lux-02/K-Copy-Harness#license",
+    "defaultPrompt": [
+      "Audit this project's Korean UX copy. Do not edit files.",
+      "Find AI-like Korean copy and show safe dry-run diffs.",
+      "Use Kanana for high-impact Korean rewrite candidates."
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": [
+      "./assets/reviewfit-before-after.png",
+      "./assets/menupan-before-after.png"
+    ]
+  }
+}

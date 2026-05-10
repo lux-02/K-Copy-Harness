@@ -1,0 +1,35 @@
+{
+  "name": "korean-ux-copy-marketplace",
+  "owner": {
+    "name": "lux-02"
+  },
+  "description": "Korean UX copy plugins for auditing and improving user-facing Korean text in codebases.",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "korean-ux-copy",
+      "source": "./plugins/korean-ux-copy",
+      "description": "Audit and improve user-facing Korean UX copy in codebases with optional Kanana-assisted rewrite candidates.",
+      "version": "0.1.0",
+      "author": {
+        "name": "lux-02"
+      },
+      "homepage": "https://github.com/lux-02/K-Copy-Harness",
+      "repository": "https://github.com/lux-02/K-Copy-Harness",
+      "license": "MIT",
+      "keywords": [
+        "korean",
+        "ux-copy",
+        "kanana",
+        "agent-skill"
+      ],
+      "category": "productivity",
+      "tags": [
+        "korean",
+        "ux-writing",
+        "copy-review",
+        "kanana"
+      ]
+    }
+  ]
+}

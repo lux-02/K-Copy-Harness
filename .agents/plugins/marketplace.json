@@ -1,0 +1,20 @@
+{
+  "name": "korean-ux-copy-marketplace",
+  "interface": {
+    "displayName": "Korean UX Copy"
+  },
+  "plugins": [
+    {
+      "name": "korean-ux-copy",
+      "source": {
+        "source": "local",
+        "path": "./plugins/korean-ux-copy"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
