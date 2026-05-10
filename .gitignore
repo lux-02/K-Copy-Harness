@@ -1,0 +1,32 @@
+# Publish allowlist:
+# Only the Codex/Claude Skills and minimal repository metadata are intended for GitHub distribution.
+
+*
+.*
+
+!.gitignore
+!README.md
+!LICENSE
+
+!assets/
+!assets/case-studies/
+!assets/case-studies/**
+
+!.agents/
+!.agents/skills/
+!.agents/skills/korean-ux-copy/
+!.agents/skills/korean-ux-copy/**
+
+!.claude/
+!.claude/skills/
+!.claude/skills/korean-ux-copy/
+!.claude/skills/korean-ux-copy/**
+
+**/.DS_Store
+**/.env
+**/.env.*
+**/node_modules/
+**/dist/
+**/build/
+**/.next/
+**/coverage/
